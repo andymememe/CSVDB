@@ -45,12 +45,11 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
     ],
     keywords='development, csv, database',
-    packages=find_packages(where='.'),
+    packages=find_packages(),
+    tests_require=[
+        'pytest'
+    ],
     python_requires='>=3.5, <4',
-    install_requires=[],
-    extras_require={},
-    package_data={},
-    entry_points={},
     project_urls={
         'Bug Reports': 'https://github.com/andymememe/CSVDB/issues',
         'Source': 'https://github.com/andymememe/CSVDB',
