@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
+      - name: Create result dir
+        run: mkdir result
       - name: Install Tox and any other packages
         run: pip install tox
       - name: Run Tox
