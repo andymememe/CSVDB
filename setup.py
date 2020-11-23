@@ -46,9 +46,6 @@ setup(
     ],
     keywords='development, csv, database',
     packages=find_packages(),
-    tests_require=[
-        'pytest'
-    ],
     python_requires='>=3.5, <4',
     project_urls={
         'Bug Reports': 'https://github.com/andymememe/CSVDB/issues',
