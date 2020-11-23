@@ -1,4 +1,4 @@
 import pytest
 
 def test_something():
-    pass
+    assert 1 == 1
