@@ -20,4 +20,11 @@ jobs:
         run: pip install tox
       - name: Run Tox
         # Run tox using the version of Python in `PATH`
-        run: tox -e py
+        run: tox --result-json=result/${{ matrix.python-version }}.json -e py
+      - name: Upload pytest test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: tox-results-${{ matrix.python-version }}
+          path: result/${{ matrix.python-version }}.json
+        # Use always() to always run this step to publish test results when there are test failures
+        if: ${{ always() }}
